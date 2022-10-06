@@ -1,9 +1,10 @@
 export const App = () => {
   return (
+    
     <div
       style={{
         height: '100vh',
-        display: 'flex',
+        display: 'flex', 
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -13,4 +14,5 @@ export const App = () => {
       React homework template
     </div>
   );
+  
 };
