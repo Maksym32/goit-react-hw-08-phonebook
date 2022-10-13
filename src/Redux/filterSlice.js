@@ -7,7 +7,7 @@ export const filterSlice = createSlice({
     initialState: {
         status: " ",
     },
-    extraReducers: {
+    reducers: {
         setStatusFilter(state,action) {
             state.status = action.payload;
         },
