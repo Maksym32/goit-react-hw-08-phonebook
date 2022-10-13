@@ -1,13 +1,12 @@
 import { ContactItem } from "./ContactItem";
 import PropTypes from 'prop-types';
-import { List } from "./ContactList.styled"
+import { List,ContactListBox } from "./ContactList.styled"
 import {  useSelector } from "react-redux";
 import { getContacts,getFilter } from "../../Redux/contacts/selectors";
 
 export const ContactList = () => {
     const contacts = useSelector(getContacts);
     const filterContact = useSelector(getFilter);
-    console.log(filterContact);
 
     const getVisibleNameFilter = () => {
         const normalFilter = filterContact.toLowerCase().trim();
@@ -20,7 +19,7 @@ export const ContactList = () => {
     const filterName = getVisibleNameFilter();
 
     return (
-        <>
+        <ContactListBox>
         <h2 style={{ textAlign: 'center' }}>Contact List</h2>
         <List>
             {filterName ?
@@ -29,7 +28,7 @@ export const ContactList = () => {
                 ))
                 : <p>No any contacts</p>}
         </List>  
-        </>
+        </ContactListBox>
     )
 }
 ContactList.propTypes = {
