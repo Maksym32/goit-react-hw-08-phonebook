@@ -12,7 +12,7 @@ export const Navigation = () => {
         Home
       </NavItem>
       {isLoggedIn && (
-        <NavItem to="/tasks">
+        <NavItem to="/contacts">
           PhoneBook
         </NavItem>
       )}
